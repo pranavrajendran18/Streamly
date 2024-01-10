@@ -8,22 +8,22 @@ Streamly is a music streaming application developed as a part of the project cou
 Represents users with attributes like first name, last name, email, password, role, and timestamps for creation and last login. Contains a one-to-many relationship with the Playlist model.
 
 ### Playlist Model
-Represents playlists with attributes like name, user ID (foreign key), art URL, and a many-to-many relationship with the Song model. The many-to-many relationship with the Song model is defined through the `playlist_song_association` table.
+Represents playlists with attributes like `name`, `user ID (foreign key)`, `art URL`, and a many-to-many relationship with the Song model. The many-to-many relationship with the Song model is defined through the `playlist_song_association` table.
 
 ### Genre Model
 Represents music genres with attributes like an ID and name. Linked to the Song model through a many-to-many relationship using the `song_genre_association` table.
 
 ### Song Model
-Represents individual songs with attributes like name, lyrics, file path, cover path, artist name, user ID (foreign key), album ID (foreign key), creation timestamp, play count, and ratings. Includes relationships with User, Album, Genre, and Rating models.
+Represents individual songs with attributes like `name`, `lyrics`, `file path`, `cover path`, `artist name`, `user ID (foreign key)`, `album ID (foreign key)`, `creation timestamp`, `play count`, and `ratings`. Includes relationships with `User`, `Album`, `Genre`, and `Rating` models.
 
 ### Rating Model
-Represents ratings given by users to songs and albums with attributes like rating value, user ID (foreign key), song ID (foreign key), and album ID (foreign key). Provides relationships with User, Song, and Album models.
+Represents ratings given by users to songs and albums with attributes like `rating value`, `user ID (foreign key)`, `song ID (foreign key)`, and `album ID (foreign key)`. Provides relationships with `User`, `Song`, and `Album` models.
 
 ### Artist Model
-Represents artists with attributes like name and a one-to-one relationship with the User model.
+Represents artists with attributes like name and a one-to-one relationship with the `User` model.
 
 ### Album Model
-Represents albums with attributes like name, artist ID (foreign key), art URL, and a one-to-many relationship with Song and Rating models.
+Represents albums with attributes like `name`, `artist ID (foreign key)`, `art URL`, and a one-to-many relationship with `Song` and `Rating` models.
 
 ## Overall System Design
 
